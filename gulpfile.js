@@ -114,8 +114,8 @@ function createConfig(cb) {
  */
 function moveJs(cb) {
   // 处理 src/libs 目录下的 js 文件，仅进行输出
-  src('src/libs/**/*.js').pipe(dest('dist/libs/'));
-  return src('src//*.js')
+  src('src/libs/*.js').pipe(dest('dist/libs/'));
+  return src('src/js/*.js')
     .pipe(
       preprocess({
         context: {
@@ -136,7 +136,12 @@ function moveJs(cb) {
         },
       })
     )
-    .pipe(dest('dist/'));
+    .pipe(dest('dist/js/'));
+  cb();
+}
+function moveJsOfLibs(cb) {
+  // 处理 src/libs 目录下的 js 文件，仅进行输出
+  return src('src/libs/*.js').pipe(dest('dist/libs/'));
   cb();
 }
 
