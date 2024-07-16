@@ -31,5 +31,6 @@
  
     "pxremUnit": 100,
   
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "px-to-rem.px-per-rem": 100
 }
