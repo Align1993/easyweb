@@ -1,0 +1,17 @@
+.info-banner.ndevor-banner .container-index .xctitle {
+  font-weight: bold;
+  font-size: 48px;
+  color: #ffffff;
+}
+.info-banner.ndevor-banner .img::before {
+  height: 0% !important;
+}
+.info-banner .container-index {
+  top: 25%;
+}
+.info-banner .container-index .txt {
+  margin-top: 0.58rem;
+}
+.info-banner.ndevor-banner {
+  height: 4.8rem;
+}
