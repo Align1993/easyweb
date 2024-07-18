@@ -2,7 +2,9 @@
   font-weight: bold;
   font-size: 0.48rem;
   color: #ffffff;
+  text-align: unset;
 }
+
 .info-banner.ndevor-banner .img::before {
   height: 0% !important;
 }
@@ -14,6 +16,8 @@
 }
 .info-banner .container-index .txt {
   margin-top: 0.58rem;
+  margin-left: 0;
+  text-align: unset;
 }
 .info-banner.ndevor-banner {
   height: 4.8rem;

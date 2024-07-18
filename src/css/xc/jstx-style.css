@@ -1,10 +1,11 @@
 .info-banner {
   height: 4.8rem;
 }
-.xctitle {
+.container-index .xctitle {
   font-weight: bold;
   font-size: 0.48rem;
   color: #ffffff;
+  text-align: unset;
 }
 .product {
   background: #ffffff;
@@ -17,6 +18,8 @@
   margin-top: 0.48rem;
   line-height: 48px;
   font-size: 18px;
+  margin-left: 0;
+  text-align: unset;
 }
 
 .pcright {
