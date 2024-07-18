@@ -2,25 +2,29 @@
   font-weight: bold;
   font-size: 0.48rem;
   color: #ffffff;
+  text-align: unset;
 }
+
 .info-banner.ndevor-banner .img::before {
   height: 0% !important;
 }
 .info-banner .container-index {
-  top: 33%;
+  top: 35%;
 }
 .info-banner .img {
   position: relative;
 }
 .info-banner .container-index .txt {
   margin-top: 0.58rem;
+  margin-left: 0;
+  text-align: unset;
 }
 .info-banner.ndevor-banner {
   height: 4.8rem;
 }
 .pcright {
   position: absolute;
-  top: 0.6rem;
+  top: 0.3rem;
   right: 3.5rem;
   width: 6.76rem !important;
   height: 3.57rem !important;
@@ -207,7 +211,42 @@
     }
   }
 }
+
+.index-box5 {
+  padding-bottom: 0.58rem;
+}
+.index-box4 .container-index .swiper-container,
+.index-box5 .container-index .list .swiper-container {
+  padding-top: 0.8rem !important;
+}
+.client {
+  width: 11rem;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+.client .flex {
+  display: flex;
+  justify-content: center;
+}
+.client .flex img {
+  width: 1.69rem;
+  height: 0.78rem;
+  margin-top: 0.23rem;
+}
+.client .flex img:not(:last-child) {
+  margin: 0.23rem 0.37rem 0 0;
+}
+
 @media (max-width: 767px) {
+  .client {
+    width: 100%;
+  }
+  .client .flex {
+    flex-wrap: wrap;
+  }
+  .info-banner .img img.pc {
+    display: block !important;
+  }
   .info-banner.ndevor-banner .container-index .xctitle {
     /* font-size: 28px !important; */
   }
@@ -236,25 +275,4 @@
   .ndevor .bg {
     height: 100%;
   }
-}
-.index-box4 .container-index .swiper-container,
-.index-box5 .container-index .list .swiper-container {
-  padding-top: 0.8rem !important;
-}
-.client {
-  width: 11rem;
-  margin: 0 auto;
-  padding-bottom: 0.5rem;
-}
-.client .flex {
-  display: flex;
-  justify-content: center;
-}
-.client .flex img {
-  width: 1.69rem;
-  height: 0.78rem;
-  margin-top: 0.23rem;
-}
-.client .flex img:not(:last-child) {
-  margin: 0.23rem 0.37rem 0 0;
 }
