@@ -90,6 +90,17 @@
                 <img src="../resources/download/download-icon_2.png" alt=""> 客户端下载
             </a>
         </nav>
+
+
+        <div class="menu">
+            <ul>
+
+
+                <li class="on">服务端下载</li>
+                <li class="">客户端下载</li>
+
+            </ul>
+        </div>
         <div class="download-box1" style=" background: #F3F6FB ">
 
             <div class="box">
@@ -371,6 +382,13 @@
         $('.download-nav a').on('click', function () {
             $(this).addClass('active').siblings().removeClass('active');
             $('.download-page .download-box1 .box .list').eq($(this).index()).addClass('on').siblings().removeClass('on');
+        })
+
+
+        $('.menu ul li').on('click', function () {
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.download-page .download-box1 .box .list').eq($(this).index()).addClass('on').siblings().removeClass('on');
+
         })
         var id = '';
 
