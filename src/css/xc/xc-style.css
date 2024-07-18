@@ -7,7 +7,7 @@
   height: 0% !important;
 }
 .info-banner .container-index {
-  top: 33%;
+  top: 35%;
 }
 .info-banner .img {
   position: relative;
@@ -20,7 +20,7 @@
 }
 .pcright {
   position: absolute;
-  top: 0.6rem;
+  top: 0.3rem;
   right: 3.5rem;
   width: 6.76rem !important;
   height: 3.57rem !important;
@@ -208,6 +208,9 @@
   }
 }
 @media (max-width: 767px) {
+  .info-banner .img img.pc {
+    display: block !important;
+  }
   .info-banner.ndevor-banner .container-index .xctitle {
     /* font-size: 28px !important; */
   }
@@ -236,6 +239,9 @@
   .ndevor .bg {
     height: 100%;
   }
+}
+.index-box5 {
+  padding-bottom: 0.58rem;
 }
 .index-box4 .container-index .swiper-container,
 .index-box5 .container-index .list .swiper-container {
