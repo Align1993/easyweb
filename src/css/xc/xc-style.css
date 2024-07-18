@@ -211,7 +211,39 @@
     }
   }
 }
+
+.index-box5 {
+  padding-bottom: 0.58rem;
+}
+.index-box4 .container-index .swiper-container,
+.index-box5 .container-index .list .swiper-container {
+  padding-top: 0.8rem !important;
+}
+.client {
+  width: 11rem;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+.client .flex {
+  display: flex;
+  justify-content: center;
+}
+.client .flex img {
+  width: 1.69rem;
+  height: 0.78rem;
+  margin-top: 0.23rem;
+}
+.client .flex img:not(:last-child) {
+  margin: 0.23rem 0.37rem 0 0;
+}
+
 @media (max-width: 767px) {
+  .client {
+    width: 100%;
+  }
+  .client .flex {
+    flex-wrap: wrap;
+  }
   .info-banner .img img.pc {
     display: block !important;
   }
@@ -243,28 +275,4 @@
   .ndevor .bg {
     height: 100%;
   }
-}
-.index-box5 {
-  padding-bottom: 0.58rem;
-}
-.index-box4 .container-index .swiper-container,
-.index-box5 .container-index .list .swiper-container {
-  padding-top: 0.8rem !important;
-}
-.client {
-  width: 11rem;
-  margin: 0 auto;
-  padding-bottom: 0.5rem;
-}
-.client .flex {
-  display: flex;
-  justify-content: center;
-}
-.client .flex img {
-  width: 1.69rem;
-  height: 0.78rem;
-  margin-top: 0.23rem;
-}
-.client .flex img:not(:last-child) {
-  margin: 0.23rem 0.37rem 0 0;
 }
