@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html xml:lang="zh-CN" lang="zh-CN">
+<!DOCTYPE html>
+
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="renderer" content="webkit">
+
+    <meta name="force-rendering" content="webkit">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <meta name="format-detection" content="telephone=no,telephone=no,email=no,adress=no">
+
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+
+    <title>BigAnt（大蚂蚁）政府、企业IM即时通讯协同办公软件|九麒科技</title>
+
+    <meta name="keywords" content="IM，协同办公，即时通讯，即时通信，即时通讯软件，即时通，即时通下载，企业即时通讯，企业即时通讯软件" />
+
+    <meta name="description"
+        content="BigAnt（大蚂蚁）,国产化企业即时通讯软件领导品牌，国内首家电子政务即时通讯软件。专为企事业单位部门提供内部协同办公、IM即时通讯、视频聊天、局域网文件共享管理、分权限组织架构管理、一站式协同办公等功能，能够有效的缩短内部沟通距离，快速提高政企内部工作效率。" />
+
+    <link rel="stylesheet" href="../css/extend.css">
+
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/global.css">
+
+    <link rel="stylesheet" href="../css/license.css">
+    <link rel="stylesheet" href="../css/lib-layui-iframe.css">
+
+    <script src="../libs/svg-inject.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <!-- header -->
+
+    @@include('../components/header.html')
+
+    <!-- 顶部占位 -->
+
+    <div class="head-height"></div>
+
+    <!-- 免费试用 -->
+
+    <div class="Free-trial-box">
+
+        <div class="box box1">
+
+            <form id="save_from">
+                <input type="hidden" name="__token__" value="458ae87f0ff8e7a206c733d7d4368fbe" />
+                <div class="rbox rbox1">
+
+                    <div class="t1">申请试用</div>
+
+                    <!-- <div class="t2">本页面非注册账号页面，仅用于有度试用资格开通，单位已经在使用有度的用户请联系您单位管理员获取账号。</div> -->
+
+                    <div class="tbs">
+
+                        <div class="ts1">公司名称 <span>*</span></div>
+
+                        <input type="text" class="txt company" name="modelField[company]">
+
+                    </div>
+                    <div class="tbs">
+
+                        <div class="ts1">您的姓名 <span>*</span></div>
+                        <input type="text" class="txt name" name="modelField[name]">
+
+
+                    </div>
+                    <div class="tbs">
+
+                        <div class="ts1">联系电话 <span>*</span></div>
+
+                        <input type="text" class="txt tel" name="modelField[phone]">
+                    </div>
+                    <div class="tbs">
+                        <div class="ts1">短信验证码 <span>*</span></div>
+
+                        <div class="ts2">
+
+                            <input type="text" class="code" name="code">
+
+                            <input type="button" value="获取验证码" class="getcode">
+
+                        </div>
+                    </div>
+                    <div class="ckbox">
+
+                        <div class="public-btn next">提交申请</div>
+                    </div>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- <a target="blank" class="fixed-zxzx" href="https://affim.baidu.com/unique_26956033/chat?siteId=19472382&amp;userId=26956033&amp;siteToken=42732cf55a156613178d53ce762b67af">
+	<div class="icon"><img src="../resources/uploads/20230217/82e2019f5896a398e3cbc3d3258e2b7c.svg" alt=""></div>
+	<div class="txt">在线咨询</div>
+</a>
+ -->
+
+
+
+
+
+    <!-- 底部 -->
+
+
+    @@include('../components/footer.html')
+
+
+    <script src="../libs/extend.js"></script>
+
+    <script src="../libs/layui.js"></script>
+
+    <script src="../js/public.js"></script>
+
+
+    <script>
+
+        let isget_code = 0;
+
+
+
+        // 手机号码正则
+
+        let reg_tel = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/;
+
+        // 邮箱正则
+
+        let myreg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+
+        $('.getcode').click(function () {
+
+
+            let mobile = $('input[name="modelField[phone]"]').val();
+
+            if (mobile == '' || !reg_tel.test(mobile)) {
+
+                layer.msg('请输入正确的手机号码！', {
+
+                    icon: 7
+
+                });
+
+                return false;
+
+            }
+
+            $('.getcode').attr('disabled', true);
+            if (isget_code == 0) {
+                var m = 60;
+                let setcode = setInterval(function () {
+                    if (m <= 0) {
+                        $('.getcode').val('获取验证码');
+                        $('.getcode').attr('disabled', false);
+                        isget_code = 0;
+                        clearInterval(setcode);
+                        return;
+                    }
+                    isget_code = 1;
+                    $('.getcode').val('重新获取(' + m + ')');
+                    m--;
+                }, 1000)
+            }
+
+
+            $.ajax({
+
+                url: '/api/youdu/get_mobile_code',
+
+                data: {
+
+                    mobile,
+
+                },
+
+                type: 'get',
+
+                dataType: "JSON",
+
+                success: function (res) {
+
+                    if (res.code == 1) {
+
+
+                        layer.msg(res.msg, { icon: 1 });
+
+                    } else {
+
+                        layer.msg(res.msg, { icon: 7 });
+
+                    }
+
+                },
+
+                error: function () {
+
+                    layer.msg('请求错误！', { icon: 7 });
+
+                }
+
+            })
+
+        });
+
+
+
+        $('.Free-trial-box .box .rbox .ckbox .public-btn.next').on('click', function () {
+
+            const mobile = $('.Free-trial-box .box .rbox .tbs .tel').val();
+            const code = $('.Free-trial-box .box .rbox .tbs .ts2 .code').val();
+            const company = $('.Free-trial-box .box .rbox .tbs .company').val();
+            const name = $('.Free-trial-box .box .rbox .tbs .ts2 .name').val();
+            if (!company) {
+                layer.msg('请输入公司名称！', {
+                    icon: 7
+                });
+                return false;
+            }
+            if (!name) {
+                layer.msg('请输入您的姓名！', {
+                    icon: 7
+                });
+                return false;
+            }
+            if (!reg_tel.test(mobile)) {
+
+                layer.msg('请输入正确的手机号码！', {
+
+                    icon: 7
+
+                });
+
+                return false;
+
+            }
+
+            if (!code) {
+
+                layer.msg('请输入验证码！', {
+
+                    icon: 7
+
+                });
+
+                return false;
+
+            }
+
+            layer.load(1);
+
+            $.ajax({
+
+                url: '/api/youdu/verify_mobile',
+
+                data: {
+
+                    mobile: mobile,
+
+                    code: code,
+
+                },
+
+                type: 'get',
+
+                dataType: "JSON",
+
+                success: function (res) {
+
+                    layer.closeAll('loading');
+
+                    if (res.code == 1) {
+
+                        layer.msg(res.msg, { icon: 1 });
+
+                        $('.Free-trial-box .box .rbox1').hide();
+
+                        $('.Free-trial-box .box .rbox2').show();
+
+                        $.ajax({
+                            url: '/api/youdu/trial_mark',
+                            data: {
+                                mobile,
+                            },
+                            type: 'get',
+                            dataType: "JSON",
+                        })
+
+                    } else {
+
+                        layer.msg(res.msg, { icon: 7 });
+
+                    }
+
+                },
+
+                error: function () {
+
+                    layer.closeAll('loading');
+
+                    layer.msg('请求错误！', { icon: 7 });
+
+                }
+
+            })
+
+        })
+
+
+
+
+
+
+        $('.to-concat').on('click', function () {
+            window.location.href = "about/contact.html";
+        });
+
+
+    </script>
+
+
+
+
+
+</body>
+
+
+
+</html>
