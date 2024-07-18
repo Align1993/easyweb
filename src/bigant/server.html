@@ -83,10 +83,10 @@
 
         </div>
         <nav class="download-nav">
-            <a class="active" href="javascript:;">
+            <a class="active" href='/bigant/server.html'>
                 <img src="../resources/download/download-icon.png" alt=""> 服务端下载
             </a>
-            <a href="javascript:;">
+            <a href='/bigant/client.html'>
                 <img src="../resources/download/download-icon_2.png" alt=""> 客户端下载
             </a>
         </nav>
@@ -224,113 +224,7 @@
 
                 </div>
 
-                <div class="list">
 
-                    <ul>
-
-
-                        <li>
-
-
-                            <a href="https://youdu.cn/download/pkg?pkg=qt" target="_blank">
-
-                                <div>
-                                    <div class="icon"><img src="../resources/download/c5.png" alt="安卓客户端"></div>
-
-                                </div>
-
-                                <!-- 鼠标交互 -->
-                                <div class="load-tc">
-
-                                    <div class="tips">
-                                        <div class="s1">点击下载
-                                        </div>
-                                        <div class="s2">安卓客户端</div>
-                                        <!-- <div class="s2"></div> -->
-                                    </div>
-                                </div>
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-
-                            <a href="https://youdu.cn/download/pkg/?pkg=mac" target="_blank">
-
-                                <div>
-                                    <div class="icon"><img src="../resources/download/c6.png" alt="Mac客户端"></div>
-
-                                </div>
-
-                                <!-- 鼠标交互 -->
-                                <div class="load-tc">
-
-                                    <div class="tips">
-                                        <div class="s1">点击下载
-                                        </div>
-                                        <div class="s2">Mac客户端</div>
-                                        <!-- <div class="s2"></div> -->
-                                    </div>
-                                </div>
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-
-                            <a href="javascript:;" data-id="3">
-                                <div>
-                                    <div class="icon"><img src="../resources/download/c7.png" alt="IOS客户端"></div>
-
-                                </div>
-
-                                <!-- 鼠标交互 -->
-                                <div class="load-tc">
-
-                                    <div class="tips">
-                                        <div class="s1">点击下载
-                                        </div>
-                                        <div class="s2">IOS客户端</div>
-                                        <!-- <div class="s2"></div> -->
-                                    </div>
-                                </div>
-
-                            </a>
-
-                        </li>
-                        <li>
-
-
-                            <a href="javascript:;" data-id="3">
-                                <div>
-                                    <div class="icon"><img src="../resources/download/c8.png" alt="银河麒麟+ARM客户端"></div>
-                                </div>
-
-                                <!-- 鼠标交互 -->
-                                <div class="load-tc">
-
-                                    <div class="tips">
-                                        <div class="s1">点击下载
-                                        </div>
-                                        <div class="s2">银河麒麟+ARM客户端</div>
-                                    </div>
-                                </div>
-
-                            </a>
-
-                        </li>
-
-
-
-                    </ul>
-
-                </div>
                 <!--  <div>
                     <a class="download-client-other" href="https://youdu.cn/download/pkg?pkg=windows"
                         download="有度 Windows经典版">
@@ -379,11 +273,11 @@
     <script src="../js/public.js"></script>
 
     <script>
-        $('.download-nav a').on('click', function () {
-            $(this).addClass('active').siblings().removeClass('active');
-            $('.download-page .download-box1 .box .list').eq($(this).index()).addClass('on').siblings().removeClass('on');
-        })
-
+        /*       $('.download-nav a').on('click', function () {
+                  $(this).addClass('active').siblings().removeClass('active');
+                  $('.download-page .download-box1 .box .list').eq($(this).index()).addClass('on').siblings().removeClass('on');
+              })
+       */
 
         $('.menu ul li').on('click', function () {
             $(this).addClass('on').siblings().removeClass('on');
