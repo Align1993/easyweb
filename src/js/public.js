@@ -483,13 +483,5 @@ $('.footer .container .box1 .f-menu ul li').on('mouseover', function () {
 
 $('.flex-zxzx').on('click', function (e) {
   e.preventDefault();
-  const btn = document.getElementById('nb_icon_wrap');
-  if (!btn) {
-    window.open(
-      'https://affim.baidu.com/unique_26956033/chat?siteId=19472382&userId=26956033&siteToken=42732cf55a156613178d53ce762b67af',
-      '_blank'
-    );
-    return;
-  }
-  btn.click();
+  alert('暂未开放');
 });
