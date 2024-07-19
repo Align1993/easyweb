@@ -34,6 +34,55 @@ function hiUpgrade() {
 hiUpgrade();
 
 // 导航
+function headHandler() {
+  var currenHref = window.location.pathname;
+
+  var menus = [
+    { title: '首页', pathname: ['/', '/index.html'], index: 0 },
+    {
+      title: '产品介绍',
+      pathname: [
+        '/jstx/jstx.html',
+        '/jstx/yymh.html',
+        '/jstx/sjaq.html',
+        '/jstx/gnlb.html',
+      ],
+      index: 1,
+    },
+    { title: '信创国产化', pathname: ['/xc/xcgch.html'], index: 2 },
+    { title: '客户案例', pathname: ['/bigant/case.html'], index: 3 },
+    {
+      title: '关于九麒',
+      pathname: [
+        '/aboutus/aboutUs.html',
+        '/aboutus/qualifications.html',
+        '/aboutus/contactUs.html',
+        '/aboutus/joinUs.html',
+      ],
+      index: 4,
+    },
+    { title: '客户案例', pathname: ['/doc.html'], index: 5 },
+    {
+      title: '下载中心',
+      pathname: [
+        '/bigant/server.html',
+        '/bigant/client.html',
+        '/bigant/download-center.html',
+      ],
+      index: 7,
+    },
+  ];
+  console.log(currenHref);
+  for (var i = 0; i < menus.length; i++) {
+    console.log(menus[i].pathname);
+    // 获取当前元素的 href 属性
+    if (menus[i].pathname.indexOf(currenHref) !== -1) {
+      $('.header .box .right .right-box .menu > ul > li').eq(i).addClass('on');
+      break;
+    }
+  }
+}
+
 function headNav() {
   var oBody = $('body');
   var oHead = $('.header');
@@ -149,6 +198,7 @@ function headNav() {
   });
 }
 headNav();
+headHandler();
 
 // 顶部搜索
 function headSearch() {
