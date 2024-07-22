@@ -262,11 +262,11 @@
 .info-banner .img img.mb {
   display: none;
 }
-.container-index .public-btn {
+/* .container-index .public-btn {
   min-width: auto;
   margin-top: 0.5rem;
   padding: 0;
-}
+} */
 
 .info-banner .container-index {
   position: absolute;
