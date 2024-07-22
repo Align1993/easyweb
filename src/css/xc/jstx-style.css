@@ -1,10 +1,294 @@
-.info-banner {
-  height: 4.8rem;
+.index-box-part .container-index .menu ul li {
+  flex: 0 0 auto;
+  font-size: 18px;
+  color: #666;
+  line-height: 23px;
+  margin: 0 0.15rem;
+  padding: 0 0 0.24rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all ease-out 0.3s;
 }
+
+@media (max-width: 1580px) {
+  .info-banner .container-index .txt {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 1260px) {
+  .info-banner .container-index .txt {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .info-banner .container-index .txt {
+    font-size: 14px !important;
+  }
+}
+
+.container-index {
+  width: 73%;
+  position: relative;
+  margin: auto;
+  max-width: 1400px;
+}
+.product {
+  width: 100%;
+  background: #f8f9ff;
+  padding: 1.2rem 0 1.35rem;
+}
+
+.product .container-index .list {
+  width: 100%;
+}
+
+.product .container-index .list ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1.6rem;
+  position: relative;
+}
+
+@media (max-width: 1260px) {
+  .product .container-index .list ul li {
+    margin-bottom: 1.4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .product .container-index .list ul li {
+    margin-bottom: 1rem;
+  }
+}
+
+.product .container-index .list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.product .container-index .list ul li .public-img {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+}
+
+@media (max-width: 767px) {
+  .product .container-index .list ul li .public-img {
+    width: 100%;
+  }
+}
+
+.product .container-index .list ul li .public-img::before {
+  padding-top: 75.9%;
+}
+
+.product .container-index .list ul li .public-img img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.product .container-index .list ul li .tbox {
+  width: 33.2%;
+  margin-top: 1.4rem;
+}
+
+@media (max-width: 991px) {
+  .product .container-index .list ul li .tbox {
+    margin-top: 1rem;
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .product .container-index .list ul li .tbox {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+.product .container-index .list ul li .tbox .t1 {
+  font-size: 0.46rem;
+  line-height: 0.56rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.product .container-index .list ul li .tbox .t2 {
+  font-size: 20px;
+  color: #666;
+  line-height: 30px;
+  margin-top: 0.32rem;
+}
+
+@media (max-width: 1580px) {
+  .product .container-index .list ul li .tbox .t2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .product .container-index .list ul li .tbox .t2 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 991px) {
+  .product .container-index .list ul li .tbox .t2 {
+    font-size: 14px;
+  }
+}
+
+.product .container-index .list ul li .bg {
+  width: 54.78%;
+  position: absolute;
+  left: 19.57%;
+  bottom: calc(100% - 0.3rem);
+}
+
+@media (max-width: 1580px) {
+  .product .container-index .list ul li .bg {
+    bottom: calc(100% - 0.8rem);
+  }
+}
+
+@media (max-width: 1260px) {
+  .product .container-index .list ul li .bg {
+    bottom: calc(100% - 0.5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .product .container-index .list ul li .bg {
+    display: none;
+  }
+}
+
+.product .container-index .list ul li .bg img {
+  transform: rotateY(180deg);
+}
+
+.product .container-index .list ul li:nth-child(1) .bg {
+  display: none;
+}
+
+.product .container-index .list ul li:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.product .container-index .list ul li:nth-child(2n) .bg img {
+  transform: rotateY(0);
+}
+
+.index-box-part .container-index .menu ul {
+  display: flex;
+  gap: 0.85rem;
+  justify-content: center;
+  overflow: hidden;
+}
+@media (max-width: 1580px) {
+  .container-index {
+    width: 84%;
+  }
+}
+
+@media (max-width: 1260px) {
+  .container-index {
+    width: 90%;
+  }
+}
+
+.index-box-part .container-index .menu ul li:hover,
+.index-box-part .container-index .menu ul li.on {
+  color: #222222;
+  border-bottom: 2px solid #0066ff;
+}
+
+.index-box-part .container-index .list {
+  width: 100%;
+  margin-top: 99px;
+}
+
+.index-box-part.mobile .container-index .list {
+  margin-top: 20px;
+}
+
+.index-box-part .container-index .list > ul > li {
+  min-width: 100%;
+  justify-content: center;
+  padding-left: 0.85rem;
+  gap: 0.5rem;
+  display: none;
+  overflow: hidden;
+}
+
+.index-box-part .container-index .list ul li.on {
+  display: flex;
+}
+
+.index-box-part .container-index .list > ul > li > * {
+  width: 600px;
+  max-width: 600px;
+}
+
+.index-box-part .container-index .list > ul > li img {
+  margin: auto 0;
+}
+
+.info-banner {
+  width: 100%;
+  height: 4.8rem;
+  position: relative;
+}
+
+.info-banner .img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #030303;
+}
+
+.info-banner .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-banner .img img.mb {
+  display: none;
+}
+.container-index .public-btn {
+  min-width: auto;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.info-banner .container-index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.info-banner .container-index .txt {
+  width: 620px;
+  max-width: 100%;
+  font-size: 20px !important;
+  line-height: 30px;
+  color: #fff;
+  margin-top: 0.12rem;
+}
+
 .container-index .xctitle {
   font-weight: bold;
   font-size: 0.48rem;
-  color: #ffffff;
+  color: #227af3;
   text-align: unset;
 }
 .product {
@@ -192,7 +476,7 @@
 .tbody-recommendation {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .tbody-model span,
@@ -205,6 +489,11 @@
   line-height: 22px;
 }
 @media (max-width: 767px) {
+  .tbody-model,
+  .tbody-name,
+  .tbody-recommendation {
+    justify-content: space-between;
+  }
   .product-tab {
     width: 80%;
   }
@@ -233,7 +522,7 @@
     font-size: 14px;
   }
   .info-banner .container-index .txt {
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 25px;
   }
   .tab-menu {
