@@ -492,13 +492,13 @@
 
 @media (max-width: 1580px) {
   .swiper-container .list .swiper-prev {
-    right: calc(100% + 0.3rem);
+    right: calc(72% + 0.3rem);
   }
 }
 
 @media (max-width: 1260px) {
   .swiper-container .list .swiper-prev {
-    right: calc(100% - 0.1rem);
+    right: calc(74% - 0.1rem);
   }
 }
 
@@ -508,13 +508,13 @@
 
 @media (max-width: 1580px) {
   .swiper-container .list .swiper-next {
-    left: calc(100% + 0.3rem);
+    left: calc(72% + 0.3rem);
   }
 }
 
 @media (max-width: 1260px) {
   .swiper-container .list .swiper-next {
-    left: calc(100% - 0.1rem);
+    left: calc(74% - 0.1rem);
   }
 }
 

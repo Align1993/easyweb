@@ -145,7 +145,7 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="/bigant/case-page.html?id=1">
+              <a href="/bigant/case-page.html?type=gf&id=1">
                 <div class="left">
                   <img src="../resources/case/demo.jpg" alt="BigAnt（大蚂蚁）携手华为鸿蒙签约合作，助力完善鸿蒙生态建设" />
                 </div>
@@ -165,7 +165,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="/bigant/case-page.html?id=1">
+              <a href="/bigant/case-page.html?type=sydw&id=1">
                 <div class="left">
                   <img src="../resources/case/demo.jpg" alt="中国外汇交易中心" />
                 </div>
@@ -184,7 +184,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="/bigant/case-page.html?id=1">
+              <a href="/bigant/case-page.html?type=yc&id=1">
                 <div class="left">
                   <img src="../resources/case/demo.jpg" alt="中国外汇交易中心" />
                 </div>
@@ -234,8 +234,8 @@
 
     function initPagination(cb) {
       var dataTotal = ($("#PaginationPro").attr('dataTotal'));
-      const params = new URLSearchParams(window.location.search);
-      const page = parseInt(params.get('page') || 1);
+      var params = new URLSearchParams(window.location.search);
+      var page = parseInt(params.get('page') || 1);
 
       $("#PaginationPro").pagination(parseInt(dataTotal), {
         num_edge_entries: 1, //边缘页数
@@ -251,20 +251,22 @@
 
 
     function painationCb(page_index) {
-      const params = new URLSearchParams(window.location.search);
-      const page = parseInt(params.get('page') || 1);
+      var params = new URLSearchParams(window.location.search);
+      var page = parseInt(params.get('page') || 1);
+      var type = params.get('type') || 'all'
       if (page_index == page) {
         return
       }
-      window.location.href = window.location.origin + '/bigant/case.html?page=' + page_index
+      // window.location.href = window.location.origin + '/bigant/case.html?page=' + page_index
+      window.location.href = window.location.origin + '/bigant/case.html?page=' + page_index + '&type=' + type
       return false;
     }
 
     initPagination(painationCb)
     // 导航
     function headHandler() {
-      const params = new URLSearchParams(window.location.search);
-      const type = params.get('type') || 'all'
+      var params = new URLSearchParams(window.location.search);
+      var type = params.get('type') || 'all'
 
       var menus = [
         { title: '全部', pathname: 'all' },
@@ -274,7 +276,6 @@
         { title: '国防', pathname: 'gf' },
         { title: '其他', pathname: 'qt' },
       ];
-      console.log(type);
       for (var i = 0; i < menus.length; i++) {
         // 获取当前元素的 href 属性
         if (type === menus[i].pathname) {
@@ -286,7 +287,6 @@
       }
     }
     headHandler();
-
     var swiperibox5 = new Swiper(
       '.swiper-container .list .swiper-container',
       {

@@ -75,11 +75,10 @@
       <a href="/">首页</a> &nbsp;&nbsp; > &nbsp;&nbsp;
       <a href="/bigant/case.html">客户案例</a>
       &nbsp;&nbsp; > &nbsp;&nbsp;
-      <a href="/bigant/case.html">全部</a>
+      <a href="/bigant/case.html?type=all" class="type">全部</a>
       &nbsp;&nbsp; > &nbsp;&nbsp;
       <a href="/log" class="log">案例详情</a>
     </div>
-
   </div>
   <!-- 资讯中心 -->
 
@@ -136,6 +135,26 @@
 
   <script src="../js/public.js"></script>
 
+  <script type="text/javascript">
+
+
+    $(document).ready(function () {
+      var params = new URLSearchParams(window.location.search);
+      var type = params.get('type') || 'all';
+      var enums = {
+        all: '全部',
+        sydw: '政府/事业单位',
+        yc: '烟草',
+        dzxqy: '大中型企业',
+        gf: '国防',
+        qt: '其他',
+      }
+      $('.Breadcrumbs .container-index a.type').text(enums[type])
+      $('.Breadcrumbs .container-index a.type').attr('href', window.location.origin + '/bigant/case.html?type=' + type)
+    })
+
+
+  </script>
 </body>
 
 </html>
