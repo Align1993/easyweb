@@ -404,8 +404,8 @@
 .index-box-part {
   width: 100%;
   background: linear-gradient(0deg, #f0f6ff 0%, #feffff 100%);
-  padding: 0.6rem 0 1.5rem;
-  height: 960px;
+  padding: 0.6rem 0 0.5rem;
+  /* height: 960px; */
 }
 
 .index-box-part.mobile {

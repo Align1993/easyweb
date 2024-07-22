@@ -382,7 +382,7 @@
 .index-box5 .container-index .list .swiper-slide a .tbox .t1 {
   font-size: 0.24rem;
   color: #222;
-  line-height: 0.32rem;
+  /* line-height: 0.32rem; */
   height: 0.64rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;

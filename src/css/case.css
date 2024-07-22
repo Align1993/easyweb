@@ -296,7 +296,7 @@
 }
 
 .swiper-container .container-index {
-  width: 89%;
+  width: 94%;
   position: relative;
   margin: auto;
   max-width: 1400px;
@@ -487,7 +487,7 @@
 }
 
 .swiper-container .list .swiper-prev {
-  right: calc(70% + 0.65rem);
+  right: calc(69% + 0.65rem);
 }
 
 @media (max-width: 1580px) {
@@ -503,7 +503,7 @@
 }
 
 .swiper-container .list .swiper-next {
-  left: calc(70% + 0.65rem);
+  left: calc(69% + 0.65rem);
 }
 
 @media (max-width: 1580px) {
@@ -526,4 +526,21 @@
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.page-list span {
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+  color: #555;
+  font-weight: 700;
+  margin: 0 3px;
+}
+.page-list .current {
+  background: linear-gradient(to bottom, #007fff, #0f59ee);
+  color: #fff;
 }

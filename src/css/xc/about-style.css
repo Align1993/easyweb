@@ -21,7 +21,7 @@
   display: none;
 }
 .container-index .public-btn {
-  min-width: auto;
+  /* min-width: auto; */
   margin-top: 0.5rem;
   padding: 0;
 }
@@ -42,13 +42,20 @@
   color: #fff;
   margin-top: 0.12rem;
 }
-.public-btn {
+/* .public-btn {
   width: 1.69rem;
   height: 0.57rem;
   background: linear-gradient(90deg, #347df8 0%, #599ffd 100%);
   border-radius: 8px;
   font-size: 16px;
   color: #ffffff;
+} */
+@media (max-width: 767px) {
+  .public-btn {
+    min-width: 2.4rem;
+    height: 0.8rem;
+    border-radius: 0.4rem;
+  }
 }
 .flex {
   display: flex;
