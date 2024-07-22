@@ -72,7 +72,6 @@ function headHandler() {
       index: 7,
     },
   ];
-  console.log(currenHref);
   for (var i = 0; i < menus.length; i++) {
     console.log(menus[i].pathname);
     // 获取当前元素的 href 属性
@@ -201,27 +200,6 @@ headNav();
 headHandler();
 
 // 顶部搜索
-function headSearch() {
-  var obj = $('#c-header form');
-  var oBox = obj.find('.c-box');
-  obj.hover(
-    function () {
-      oBox.stop().fadeIn();
-    },
-    function () {
-      oBox.stop().fadeOut();
-    }
-  );
-  obj.submit(function () {
-    if (!$(this).find('input').val()) {
-      layer.msg('请输入搜索的关键词！', {
-        icon: 7,
-      });
-      return false;
-    }
-  });
-}
-headSearch();
 
 // 首页轮播
 function homeBanner() {
@@ -251,7 +229,7 @@ function homeBanner() {
   // 设置全屏
   // HiSetClientHeight($(".c-home-banner .swiper-slide img"));
 }
-homeBanner();
+// homeBanner();
 
 // 可视化数据滚动
 function visualData(obj) {
@@ -289,7 +267,7 @@ function visualData(obj) {
     });
   });
 }
-visualData($('.c-num-move'));
+// visualData($('.c-num-move'));
 
 // 侧边栏回到顶部
 function goTop() {
@@ -319,7 +297,7 @@ function goTop() {
     fn1();
   });
 }
-goTop();
+// goTop();
 
 // 底部导航
 function footerNav() {
@@ -336,7 +314,7 @@ function footerNav() {
       });
   });
 }
-footerNav();
+// footerNav();
 
 // 二维码弹窗
 function codePop() {
@@ -359,7 +337,7 @@ function codePop() {
     w.stop().fadeToggle();
   });
 }
-codePop();
+// codePop();
 
 // banner设置全屏高度
 // HiSetClientHeight($(".banner"));

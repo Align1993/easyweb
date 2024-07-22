@@ -105,6 +105,7 @@
               <li>研发岗 ></li>
             </ul>
           </div>
+
           <div class="joinUs-right-content">
             <div class="joinUs-right">
               <div class="joinUs-right-left">
@@ -129,8 +130,6 @@
                   <p>4 、产品支持，提供基于产品的大项目售前支持，行业入围支持，特殊重点项目的支持；</p>
                   <p>5 、产品推广，负责产品推广材料的撰写，制定产品推广计划，落实产品推广细则；</p>
                   <p>6 、产品培训，负责撰写产品介绍相关资料，面向客户以及公司内部销售，技术，售后等部门进行产品培训。</p>
-
-
                 </div>
               </div>
             </div>
@@ -199,6 +198,11 @@
   <script src="../js/public.js"></script>
   <script>
     $(document).ready(function () {
+      $('.joinUs .joinUs-left ul li').on('click', function () {
+        console.log(this);
+        $(this).addClass('active').siblings().removeClass('active');
+        // $('.index-box-part .container-index .list ul li').eq($(this).index()).addClass('on').siblings().removeClass('on'); 
+      })
 
       $('.about-content .about-number .number .num').countUp({
 

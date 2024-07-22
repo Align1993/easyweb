@@ -372,9 +372,9 @@
 .none {
   display: none;
 }
-.container-index {
+/* .container-index {
   width: 50%;
-}
+} */
 .product .container-index .list ul li .tbox {
   width: 37.2%;
   margin-top: 0.5rem;
