@@ -695,7 +695,7 @@
   border-bottom: 1px solid #ddd;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .section-5 .container-index .menu {
     display: block;
   }
@@ -760,14 +760,6 @@
   background: linear-gradient(90deg, #347df8 0%, #599ffd 100%);
   border-radius: 29px;
   color: #fff;
-}
-
-@media (max-width: 1260px) {
-  .section-5 .container-index .list ul li {
-    width: calc(33.33% - 0.4rem);
-    margin: 0 0.2rem;
-    padding: 0.6rem 0.2rem 0.8rem;
-  }
 }
 
 @media (max-width: 767px) {

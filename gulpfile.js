@@ -304,8 +304,8 @@ function node(cb) {
 }
 
 const watcher = watch([
-  'src/css/*.css',
-  'src/js/*.js',
+  'src/css/**/*.css',
+  'src/js/**/*.js',
   'src/resources/**/*.*',
   'src/**/*.html',
 ]);
