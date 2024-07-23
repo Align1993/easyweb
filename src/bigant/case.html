@@ -14,7 +14,7 @@
   <meta name="format-detection" content="telephone=no,telephone=no,email=no,adress=no" />
 
   <meta name="viewport"
-    content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 
   <title>BigAnt（大蚂蚁））政府、企业IM即时通讯协同办公软件|九麒科技</title>
 
@@ -34,7 +34,6 @@
   <link rel="stylesheet" href="../css/lib-layui-iframe.css" />
 
   <script src="../libs/svg-inject.min.js"></script>
-
 </head>
 
 <body>
@@ -47,7 +46,6 @@
   <div class="info-banner">
     <div class="img">
       <img src="../resources/case/banner_2.png" alt="" class="pc" />
-      <img src="../resources/uploads/images/20240517/97fc140540ee006cca4ced251cd395d1.png" alt="" class="mb" />
     </div>
     <div class="container-index">
       <h2 class="title">客户案例</h2>
@@ -83,59 +81,55 @@
         <li>
           <a>
             <div class="">
-              <img src="../resources/case/c2.png" alt="中国外汇交易中心" />
+              <img src="../resources/case/c2.png" alt="" />
             </div>
           </a>
         </li>
         <li>
           <a>
             <div class="">
-              <img src="../resources/case/c3.png" alt="中国外汇交易中心" />
+              <img src="../resources/case/c3.png" alt="" />
             </div>
           </a>
         </li>
         <li>
           <a>
             <div class="">
-              <img src="../resources/case/c4.png" alt="喜讯！BigAnt（大蚂蚁）获评&ldquo;2023行业信息技术应用创新卓越产品&rdquo;" />
+              <img src="../resources/case/c4.png" alt="" />
             </div>
           </a>
         </li>
         <li>
           <a>
             <div class="">
-              <img src="../resources/case/c5.png" alt="喜讯！热烈祝贺信达九州荣获&ldquo;创新型中小企业&rdquo;称号！" />
+              <img src="../resources/case/c5.png" alt="" />
             </div>
           </a>
         </li>
         <li>
           <a>
             <div class="">
-              <img src="../resources/case/c6.png" alt="全面支持国产信创的即时通讯产品，信达九州喜提&ldquo;重点推荐企业&rdquo;" />
+              <img src="../resources/case/c6.png" alt="" />
             </div>
           </a>
         </li>
         <li>
           <a>
             <div class="">
-              <img src="../resources/case/c7.png" alt="喜讯！BigAnt（大蚂蚁）荣获2022年广东软件风云榜优秀软件产品和解决方案" />
+              <img src="../resources/case/c7.png" alt="" />
             </div>
           </a>
         </li>
         <li>
           <a>
             <div class="">
-              <img src="../resources/case/c8.png" alt="RTX 腾讯通停止服务，原用户该何去何从？" />
+              <img src=" ../resources/case/c8.png" alt="" />
             </div>
           </a>
         </li>
       </ul>
       <div class="page-list">
-
-        <div id="PaginationPro" class="pagination" dataTotal="11">
-
-        </div>
-
+        <div id="PaginationPro" class="pagination" dataTotal="11"></div>
       </div>
     </div>
   </div>
@@ -147,7 +141,7 @@
             <div class="swiper-slide">
               <a href="/bigant/case-page.html?type=gf&id=1">
                 <div class="left">
-                  <img src="../resources/case/demo.jpg" alt="BigAnt（大蚂蚁）携手华为鸿蒙签约合作，助力完善鸿蒙生态建设" />
+                  <img src="../resources/case/demo.jpg" alt="" />
                 </div>
 
                 <div class="tbox">
@@ -167,7 +161,7 @@
             <div class="swiper-slide">
               <a href="/bigant/case-page.html?type=sydw&id=1">
                 <div class="left">
-                  <img src="../resources/case/demo.jpg" alt="中国外汇交易中心" />
+                  <img src="../resources/case/demo.jpg" alt="" />
                 </div>
                 <div class="tbox">
                   <h3 class="t1">中国外汇交易中心</h3>
@@ -231,42 +225,45 @@
   <script type="text/javascript" src="../libs/jquery.pagination.js"></script>
 
   <script>
-
     function initPagination(cb) {
-      var dataTotal = ($("#PaginationPro").attr('dataTotal'));
+      var dataTotal = $('#PaginationPro').attr('dataTotal');
       var params = new URLSearchParams(window.location.search);
       var page = parseInt(params.get('page') || 1);
 
-      $("#PaginationPro").pagination(parseInt(dataTotal), {
+      $('#PaginationPro').pagination(parseInt(dataTotal), {
         num_edge_entries: 1, //边缘页数
         current_page: page,
         num_display_entries: 10, //主体页数
         callback: cb,
         items_per_page: 10, //每页显示1项
-        prev_text: "<",
-        next_text: ">",
-        link_to: 'javascript:'
+        prev_text: '<',
+        next_text: '>',
+        link_to: 'javascript:',
       });
     }
-
 
     function painationCb(page_index) {
       var params = new URLSearchParams(window.location.search);
       var page = parseInt(params.get('page') || 1);
-      var type = params.get('type') || 'all'
+      var type = params.get('type') || 'all';
       if (page_index == page) {
-        return
+        return;
       }
       // window.location.href = window.location.origin + '/bigant/case.html?page=' + page_index
-      window.location.href = window.location.origin + '/bigant/case.html?page=' + page_index + '&type=' + type
+      window.location.href =
+        window.location.origin +
+        '/bigant/case.html?page=' +
+        page_index +
+        '&type=' +
+        type;
       return false;
     }
 
-    initPagination(painationCb)
+    initPagination(painationCb);
     // 导航
     function headHandler() {
       var params = new URLSearchParams(window.location.search);
-      var type = params.get('type') || 'all'
+      var type = params.get('type') || 'all';
 
       var menus = [
         { title: '全部', pathname: 'all' },

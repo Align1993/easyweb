@@ -444,7 +444,7 @@ table {
   color: #005ce6;
 }
 
-#hi-upgrade .hi-wrap .hi-list li .hi-ico1 {
+/* #hi-upgrade .hi-wrap .hi-list li .hi-ico1 {
   background: url(../resources/images/hi-llq-1.jpg) no-repeat center / 100%;
 }
 
@@ -466,7 +466,7 @@ table {
 
 #hi-upgrade .hi-wrap .hi-list li .hi-ico6 {
   background: url(../resources/images/hi-llq-6.jpg) no-repeat center / 100%;
-}
+} */
 
 /* 占位标签，设置导航样式 */
 #c-placeholder {

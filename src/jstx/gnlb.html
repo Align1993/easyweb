@@ -3,19 +3,18 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
+  <meta charset="UTF-8" />
 
-  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit" />
 
-  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit" />
 
-  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-
-  <meta name="format-detection" content="telephone=no,telephone=no,email=no,adress=no">
+  <meta name="format-detection" content="telephone=no,telephone=no,email=no,adress=no" />
 
   <meta name="viewport"
-    content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 
   <title>BigAnt（大蚂蚁）政府、企业IM即时通讯协同办公软件|九麒科技</title>
 
@@ -25,52 +24,40 @@
     content="BigAnt（大蚂蚁）,国产化企业即时通讯软件领导品牌，国内首家电子政务即时通讯软件。专为企事业单位部门提供内部协同办公、IM即时通讯、视频聊天、局域网文件共享管理、分权限组织架构管理、一站式协同办公等功能，能够有效的缩短内部沟通距离，快速提高政企内部工作效率。" />
 
   <link rel="icon" href="../resources/global/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="../css/extend.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/lib-layui-iframe.css">
+  <link rel="stylesheet" href="../css/extend.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/lib-layui-iframe.css" />
 
-  <link rel="stylesheet" href="../css/xc/jstx-style.css">
+  <link rel="stylesheet" href="../css/xc/jstx-style.css" />
 
   <script src="../libs/svg-inject.min.js"></script>
-
 </head>
 
-
-
 <body>
-
-
-
   <!-- header -->
 
   @@include('../components/header.html')
-
-
 
   <!-- 顶部占位 -->
 
   <div class="head-height"></div>
 
-
   <div class="info-banner product-banner">
-
     <div class="img">
-      <img src="../resources/images/jstx/bg.png" alt="" class="pc">
+      <img src="../resources/images/jstx/bg.png" alt="" class="pc" />
     </div>
 
     <div class="container-index">
       <div class="title xctitle">功能列表</div>
-      <div class="txt">桌面端、移动端、web端多端同步互通，快速识别功能差异</div>
-
+      <div class="txt">
+        桌面端、移动端、web端多端同步互通，快速识别功能差异。
+      </div>
     </div>
-
   </div>
 
-
-
   <div class="tab">
-    <div class="tab-menu " data-index="/jstx/jstx.html">
+    <div class="tab-menu" data-index="/jstx/jstx.html">
       <span>即时通讯</span>
     </div>
     <div class="tab-menu" data-index="/jstx/yymh.html">
@@ -85,9 +72,7 @@
   </div>
   <!-- wow fadeInRigh -->
 
-
   <div class="product product-gnlb">
-
     <div class="container-index">
       <div class="product-tab">
         <div class="product-tab-menu active" data-index="0">
@@ -97,7 +82,7 @@
           <span>服务端功能列表</span>
         </div>
       </div>
-      <div class="tab-content ">
+      <div class="tab-content">
         <div class="thead">
           <div class="thead-flex">
             <span>功能模块</span>
@@ -133,7 +118,6 @@
             </div>
             <div class="tbody-recommendation">
               <span>支持自动检测后台版本，下载更新升级，支持客户端升级策略设置（最大下载人数、下载发送间隔、下载速度）</span>
-
             </div>
           </div>
 
@@ -192,7 +176,6 @@
             </div>
             <div class="tbody-recommendation">
               <span>支持自动检测后台版本，下载更新升级，支持客户端升级策略设置（最大下载人数、下载发送间隔、下载速度）</span>
-
             </div>
           </div>
 
@@ -215,19 +198,12 @@
           </div>
         </div>
       </div>
-
     </div>
-
   </div>
-
-
-
 
   <!-- 底部 -->
 
   @@include('../components/footer.html')
-
-
 
   <script src="../libs/extend.js"></script>
 
@@ -235,25 +211,17 @@
 
   <script src="../js/public.js"></script>
   <script>
-
-    $(".tab .tab-menu").click(function () {
-      window.location.href = $(this).attr('data-index')
+    $('.tab .tab-menu').click(function () {
+      window.location.href = $(this).attr('data-index');
     });
-    $(".product-tab .product-tab-menu").click(function () {
-      $(".product-tab").find(".product-tab-menu").removeClass("active");
-      $(this).addClass("active");
-      $(".tab-content").addClass("none");
-      $(".tab-content").removeAttr("style");
-      $(".tab-content")[$(this).attr("data-index")].style.display = "block"
-
+    $('.product-tab .product-tab-menu').click(function () {
+      $('.product-tab').find('.product-tab-menu').removeClass('active');
+      $(this).addClass('active');
+      $('.tab-content').addClass('none');
+      $('.tab-content').removeAttr('style');
+      $('.tab-content')[$(this).attr('data-index')].style.display = 'block';
     });
   </script>
-
-
-
-
 </body>
-
-
 
 </html>

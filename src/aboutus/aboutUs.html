@@ -3,19 +3,18 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
+    <meta charset="UTF-8" />
 
-    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit" />
 
-    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit" />
 
-    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-
-    <meta name="format-detection" content="telephone=no,telephone=no,email=no,adress=no">
+    <meta name="format-detection" content="telephone=no,telephone=no,email=no,adress=no" />
 
     <meta name="viewport"
-        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 
     <title>BigAnt（大蚂蚁）政府、企业IM即时通讯协同办公软件|九麒科技</title>
 
@@ -26,47 +25,36 @@
 
     <link rel="icon" href="../resources/global/favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="../css/extend.css">
+    <link rel="stylesheet" href="../css/extend.css" />
     <!-- <link rel="stylesheet" href="../css/style.css"> -->
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/lib-layui-iframe.css">
-    <link rel="stylesheet" href="../css/xc/about-style.css">
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/lib-layui-iframe.css" />
+    <link rel="stylesheet" href="../css/xc/about-style.css" />
 
     <script src="../libs/svg-inject.min.js"></script>
-
 </head>
 
-
-
 <body>
-
     <!-- header -->
 
     @@include('../components/header.html')
-
-
 
     <!-- 顶部占位 -->
 
     <div class="head-height"></div>
 
-
-
-
-
     <div class="info-banner product-banner">
-
         <div class="img">
-            <img src="../resources/images/about/bg.png" alt="" class="pc">
+            <img src="../resources/images/about/bg.png" alt="" class="pc" />
         </div>
 
         <div class="container-index">
             <div class="title xctitle">关于我们</div>
-            <div class="txt">杭州九麒科技有限公司具有自主知识产权的大蚂蚁企业级即时通讯软件则是为政府、企业的实时安全通信打造的私有云即时通讯产品。
+            <div class="txt">
+                杭州九麒科技有限公司具有自主知识产权的大蚂蚁企业级即时通讯软件则是为政府、企业的实时安全通信打造的私有云即时通讯产品。
             </div>
             <a href="/bigant/license.html" class="public-btn Free-trial">免费试用</a>
         </div>
-
     </div>
 
     <div class="tab">
@@ -86,12 +74,11 @@
     <!-- wow fadeInRigh -->
     <!-- 产品介绍 -->
 
-    <div class="product  ">
-
+    <div class="product">
         <div class="container-index">
             <div class="list">
                 <div class="flex aboutUs wow fadeInUp">
-                    <img src="../resources/images/about/aboutbg.png" alt="" class="aboutBg">
+                    <img src="../resources/images/about/aboutbg.png" alt="" class="aboutBg" />
                     <div class="about-text">
                         <div class="about-text-title">关于我们</div>
                         <div class="about-text-content">
@@ -99,16 +86,21 @@
                         </div>
                         <div class="about-text-number flex">
                             <div class="about-number">
-                                <div class="number"><span class="num">200</span><span>+</span></div>
+                                <div class="number">
+                                    <span class="num">200</span><span>+</span>
+                                </div>
                                 <span class="number-text">合作客户</span>
                             </div>
                             <div class="about-number">
-                                <div class="number"><span class="num">100</span><span>+</span></div>
+                                <div class="number">
+                                    <span class="num">100</span><span>+</span>
+                                </div>
                                 <span class="number-text">专业服务团队</span>
                             </div>
                             <div class="about-number">
-
-                                <div class="number"><span class="num">20</span><span>个</span></div>
+                                <div class="number">
+                                    <span class="num">20</span><span>个</span>
+                                </div>
                                 <span class="number-text">开发项目</span>
                             </div>
                             <div class="about-number">
@@ -118,20 +110,14 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
-
         </div>
-
     </div>
 
-    <div class="history  wow fadeInUp">
-        <img src="../resources/images/about/history.png" alt="" width="100%" height="100%">
+    <div class="history wow fadeInUp">
+        <img src="../resources/images/about/history.png" alt="" width="100%" height="100%" />
         <div class="history-text">
             <div class="line">
-
                 <div class="loading">
                     <div class="dot"></div>
                     <div class="year">2012</div>
@@ -164,13 +150,9 @@
         </div>
     </div>
 
-
     <!-- 底部 -->
 
-
     @@include('../components/footer.html')
-
-
 
     <script src="../libs/extend.js"></script>
 
@@ -179,22 +161,15 @@
     <script src="../js/public.js"></script>
     <script>
         $(document).ready(function () {
-
             $('.aboutUs .about-number .number .num').countUp({
                 delay: 10,
-                time: 3000
+                time: 3000,
             });
         });
-        $(".tab .tab-menu").click(function () {
-            window.location.href = $(this).attr('data-index')
+        $('.tab .tab-menu').click(function () {
+            window.location.href = $(this).attr('data-index');
         });
     </script>
-
-
-
-
 </body>
-
-
 
 </html>

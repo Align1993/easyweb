@@ -3,19 +3,18 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
+  <meta charset="UTF-8" />
 
-  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit" />
 
-  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit" />
 
-  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-
-  <meta name="format-detection" content="telephone=no,telephone=no,email=no,adress=no">
+  <meta name="format-detection" content="telephone=no,telephone=no,email=no,adress=no" />
 
   <meta name="viewport"
-    content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 
   <title>BigAnt（大蚂蚁）政府、企业IM即时通讯协同办公软件|九麒科技</title>
 
@@ -25,55 +24,40 @@
     content="BigAnt（大蚂蚁）,国产化企业即时通讯软件领导品牌，国内首家电子政务即时通讯软件。专为企事业单位部门提供内部协同办公、IM即时通讯、视频聊天、局域网文件共享管理、分权限组织架构管理、一站式协同办公等功能，能够有效的缩短内部沟通距离，快速提高政企内部工作效率。" />
   <link rel="icon" href="../resources/global/favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="../css/extend.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/lib-layui-iframe.css">
-  <link rel="stylesheet" href="../css/xc/about-style.css">
+  <link rel="stylesheet" href="../css/extend.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/lib-layui-iframe.css" />
+  <link rel="stylesheet" href="../css/xc/about-style.css" />
 
   <script src="../libs/svg-inject.min.js"></script>
-
 </head>
 
-
-
 <body>
-
-
-
   <!-- header -->
 
   @@include('../components/header.html')
-
-
 
   <!-- 顶部占位 -->
 
   <div class="head-height"></div>
 
-
-
-
-
   <div class="info-banner product-banner">
-
     <div class="img">
-      <img src="../resources/images/about/bg.png" alt="" class="pc">
+      <img src="../resources/images/about/bg.png" alt="" class="pc" />
     </div>
 
     <div class="container-index">
       <div class="title xctitle">关于我们</div>
-      <div class="txt">杭州九麒科技有限公司具有自主知识产权的大蚂蚁企业级即时通讯软件则是为政府、企业的实时安全通信打造的私有云即时通讯产品。
+      <div class="txt">
+        杭州九麒科技有限公司具有自主知识产权的大蚂蚁企业级即时通讯软件则是为政府、企业的实时安全通信打造的私有云即时通讯产品。
       </div>
       <a href="/bigant/license.html" class="public-btn Free-trial">免费试用</a>
     </div>
-
   </div>
 
-
-
   <div class="tab">
-    <div class="tab-menu " data-index="/aboutus/aboutUs.html">
+    <div class="tab-menu" data-index="/aboutus/aboutUs.html">
       <span>公司简介</span>
     </div>
     <div class="tab-menu" data-index="/aboutus/qualifications.html">
@@ -82,7 +66,7 @@
     <div class="tab-menu active" data-index="/aboutus/contactUs.html">
       <span>联系我们</span>
     </div>
-    <div class="tab-menu " data-index="/aboutus/joinUs.html">
+    <div class="tab-menu" data-index="/aboutus/joinUs.html">
       <span>加入我们</span>
     </div>
   </div>
@@ -90,43 +74,32 @@
   <!-- 产品介绍 -->
 
   <div class="product">
-
     <div class="container-index">
       <div class="list">
         <div class="about-title">联系我们</div>
 
-
         <div class="about-content">
           <div id="mapContainer"></div>
         </div>
-
-
-
-
       </div>
-
     </div>
-
   </div>
   <!-- 图片弹窗 -->
 
   <div id="hi-img-pop">
-
     <div href="javascript:;" class="hi-close"></div>
 
-    <img src="" alt="">
-
+    <img src="" alt="" />
   </div>
 
   <!-- 底部 -->
-
 
   @@include('../components/footer.html')
 
   <script type="text/javascript">
     window._AMapSecurityConfig = {
-      securityJsCode: '52cc620eca547df528d666c621fd7c42'
-    }
+      securityJsCode: '52cc620eca547df528d666c621fd7c42',
+    };
   </script>
   <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=373cae474c28bb24724ad235685bda59"></script>
 
@@ -137,12 +110,10 @@
   <script src="../js/public.js"></script>
   <script>
     //地图初始化时，在地图上添加一个marker标记,鼠标点击marker可弹出自定义的信息窗体
-    var map = new AMap.Map("mapContainer", {
+    var map = new AMap.Map('mapContainer', {
       resizeEnable: true,
-      center: [
-        120.146694, 30.279654
-      ],
-      zoom: 16
+      center: [120.146694, 30.279654],
+      zoom: 16,
     });
     addMarker();
 
@@ -151,7 +122,7 @@
       map.clearMap();
       var marker = new AMap.Marker({
         map: map,
-        position: [120.146694, 30.279654]
+        position: [120.146694, 30.279654],
       });
       //鼠标点击marker弹出自定义的信息窗体
       marker.on('click', function () {
@@ -161,33 +132,35 @@
     //实例化信息窗体
     var title = '',
       content = [];
-    content.push("<div> 地址：杭州市西湖区文三路号东部软件园2号楼6楼</div>");
-    content.push("<div class='phone'><span>联系方式：</span>0571-28312298 <p>13750848688</p></div>");
-    content.push("<div>邮箱：info@jiuqitech.cn</div>");
+    content.push('<div> 地址：杭州市西湖区文三路号东部软件园2号楼6楼</div>');
+    content.push(
+      "<div class='phone'><span>联系方式：</span>0571-28312298 <p>13750848688</p></div>"
+    );
+    content.push('<div>邮箱：info@jiuqitech.cn</div>');
     // content.push("<a
     // href='https://ditu.amap.com/detail/B000A8URXB?citycode=110105'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
       isCustom: true, //使用自定义窗体
-      content: createInfoWindow(title, content.join("<br/>")),
-      offset: new AMap.Pixel(16, -45)
+      content: createInfoWindow(title, content.join('<br/>')),
+      offset: new AMap.Pixel(16, -45),
     });
     // 打开信息窗体
     infoWindow.open(map, [120.146694, 30.279654]);
 
     //构建自定义信息窗体
     function createInfoWindow(title, content) {
-      var info = document.createElement("div");
-      info.className = "content-window-card";
+      var info = document.createElement('div');
+      info.className = 'content-window-card';
 
       //可以通过下面的方式修改自定义窗体的宽高
-      info.style.width = "400px";
+      info.style.width = '400px';
       // 定义顶部标题
-      var top = document.createElement("div");
-      var titleD = document.createElement("div");
-      var closeX = document.createElement("img");
-      top.className = "info-top";
+      var top = document.createElement('div');
+      var titleD = document.createElement('div');
+      var closeX = document.createElement('img');
+      top.className = 'info-top';
       // titleD.innerHTML = title;
-      closeX.src = "https://webapi.amap.com/images/close2.gif";
+      closeX.src = 'https://webapi.amap.com/images/close2.gif';
       closeX.onclick = closeInfoWindow;
 
       // top.appendChild(titleD);
@@ -195,19 +168,20 @@
       info.appendChild(top);
 
       // 定义中部内容
-      var middle = document.createElement("div");
-      middle.className = "info-middle";
-      middle.style.backgroundColor = 'white'; middle.innerHTML = content;
+      var middle = document.createElement('div');
+      middle.className = 'info-middle';
+      middle.style.backgroundColor = 'white';
+      middle.innerHTML = content;
       info.appendChild(middle);
 
       // 定义底部内容
-      var bottom = document.createElement("div");
-      bottom.className = "info-bottom";
+      var bottom = document.createElement('div');
+      bottom.className = 'info-bottom';
       bottom.style.position = 'relative';
       bottom.style.top = '0px';
       bottom.style.margin = '0 auto';
-      var sharp = document.createElement("img");
-      sharp.src = "https://webapi.amap.com/images/sharp.png";
+      var sharp = document.createElement('img');
+      sharp.src = 'https://webapi.amap.com/images/sharp.png';
       bottom.appendChild(sharp);
       info.appendChild(bottom);
       return info;
@@ -218,26 +192,17 @@
       map.clearInfoWindow();
     }
     $(document).ready(function () {
-
       $('.about-content .about-number .number .num').countUp({
-
         delay: 10,
 
-        time: 3000
-
+        time: 3000,
       });
-
     });
-    HiImgPop($(".list .public-img"));
-    $(".tab .tab-menu").click(function () {
-      window.location.href = $(this).attr('data-index')
+    HiImgPop($('.list .public-img'));
+    $('.tab .tab-menu').click(function () {
+      window.location.href = $(this).attr('data-index');
     });
   </script>
-
-
-
 </body>
-
-
 
 </html>

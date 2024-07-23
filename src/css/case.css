@@ -30,7 +30,7 @@
     opacity: 0.6;
   }
 }
-
+/* 
 @media (max-width: 767px) {
   .info-banner .img img.pc {
     display: none;
@@ -39,7 +39,7 @@
   .info-banner .img img.mb {
     display: block;
   }
-}
+} */
 
 .info-banner .container-index {
   position: absolute;

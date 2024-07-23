@@ -333,7 +333,7 @@ table {
 #hi-upgrade .hi-wrap .hi-list li a:hover {
   color: #007fff;
 }
-#hi-upgrade .hi-wrap .hi-list li .hi-ico1 {
+/* #hi-upgrade .hi-wrap .hi-list li .hi-ico1 {
   background: url(../resources/images/hi-llq-1.jpg) no-repeat center / 100%;
 }
 #hi-upgrade .hi-wrap .hi-list li .hi-ico2 {
@@ -350,7 +350,7 @@ table {
 }
 #hi-upgrade .hi-wrap .hi-list li .hi-ico6 {
   background: url(../resources/images/hi-llq-6.jpg) no-repeat center / 100%;
-}
+} */
 /* 占位标签，设置导航样式 */
 #c-placeholder {
   height: 1rem;
