@@ -49,7 +49,7 @@ function headHandler() {
       ],
       index: 1,
     },
-    { title: '信创国产化', pathname: ['/xc/xcgch.html'], index: 2 },
+    { title: '信创国产化', pathname: ['/xcgch/xcgch.html'], index: 2 },
     { title: '客户案例', pathname: ['/bigant/case.html'], index: 3 },
     {
       title: '关于九麒',
